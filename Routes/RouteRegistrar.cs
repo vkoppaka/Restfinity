@@ -24,10 +24,10 @@ namespace Restfinity.Routes
         {
             return new IRouteRegistrar[]
             {
-                new EcommerceProductsRouteRegistrar(),
-                new NewsRouteRegistrar(),
-                new EventsRouteRegistrar(),
-                new BlogsRouteRegistrar(),
+                new EcommerceProductsRouteRegistrar(Constants.EcommerceProductsControllerName),
+                new NewsRouteRegistrar(Constants.NewsControllerName),
+                new EventsRouteRegistrar(Constants.EventsControllerName),
+                new BlogsRouteRegistrar(Constants.BlogsControllerName),
                 new BlogPostsRouteRegistrar(Constants.BlogPostsControllerName)
             };
         }

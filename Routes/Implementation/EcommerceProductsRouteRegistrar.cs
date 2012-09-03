@@ -8,12 +8,11 @@ namespace Restfinity.Routes.Implementation
 {
     internal class EcommerceProductsRouteRegistrar : BaseRouteRegistrar
     {
-        public override string ControllerName
+       private readonly string controllerName;
+
+        public EcommerceProductsRouteRegistrar(string controllerName)
         {
-            get
-            {
-                return "ecommerceproducts";
-            }
+            this.controllerName = controllerName;
         }
 
         public override void RegisterRoute(RouteCollection routes)
@@ -21,12 +20,12 @@ namespace Restfinity.Routes.Implementation
             routes.MapHttpRoute(
                 name: "ProductsGetAll",
                 routeTemplate: "restfinity/ecommerce/products",
-                defaults: new { controller = ControllerName, action = DefaultGetMethod });
+                defaults: new { controller = controllerName, action = DefaultGetMethod });
 
             routes.MapHttpRoute(
                 name: "ProductsGetOne",
                 routeTemplate: "restfinity/ecommerce/product/{id}",
-                defaults: new { controller = ControllerName, action = DefaultGetMethod });
+                defaults: new { controller = controllerName, action = DefaultGetMethod });
         }
     }
 }

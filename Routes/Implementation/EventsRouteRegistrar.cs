@@ -8,12 +8,11 @@ namespace Restfinity.Routes.Implementation
 {
     internal class EventsRouteRegistrar : BaseRouteRegistrar
     {
-        public override string ControllerName
+        private readonly string controllerName;
+
+        public EventsRouteRegistrar(string controllerName)
         {
-            get
-            {
-                return "events";
-            }
+            this.controllerName = controllerName;
         }
 
         public override void RegisterRoute(RouteCollection routes)
@@ -21,12 +20,12 @@ namespace Restfinity.Routes.Implementation
             routes.MapHttpRoute(
                 name: "EventsGetAll",
                 routeTemplate: "restfinity/content/events/",
-                defaults: new { controller = ControllerName, action = DefaultGetMethod });
+                defaults: new { controller = controllerName, action = DefaultGetMethod });
 
             routes.MapHttpRoute(
                name: "EventsGetOne",
                routeTemplate: "restfinity/content/event/{id}",
-               defaults: new { controller = ControllerName, action = DefaultGetMethod });
+               defaults: new { controller = controllerName, action = DefaultGetMethod });
         }
     }
 }

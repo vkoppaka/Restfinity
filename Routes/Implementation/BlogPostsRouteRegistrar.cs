@@ -21,17 +21,17 @@ namespace Restfinity.Routes.Implementation
             routes.MapHttpRoute(
                  name: "BlogPostsGetAll",
                  routeTemplate: "restfinity/content/blogposts/",
-                 defaults: new { controller = ControllerName, action = DefaultGetMethod});
+                 defaults: new { controller = controllerName, action = DefaultGetMethod});
 
             routes.MapHttpRoute(
                name: "BlogPostsGetOne",
                routeTemplate: "restfinity/content/blogpost/{id}",
-               defaults: new { controller = ControllerName, action = DefaultGetMethod });
+               defaults: new { controller = controllerName, action = DefaultGetMethod });
 
             routes.MapHttpRoute(
                name: "BlogPostsGetAllOf",
                routeTemplate: "restfinity/content/blog/{id}/posts",
-               defaults: new { controller = ControllerName, action = "GetDetailsOf" });
+               defaults: new { controller = controllerName, action = "GetDetailsOf" });
         }
 
     }

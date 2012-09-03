@@ -9,12 +9,11 @@ namespace Restfinity.Routes.Implementation
 {
     internal class BlogsRouteRegistrar : BaseRouteRegistrar
     {
-        public override string ControllerName
+        private readonly string controllerName;
+
+        public BlogsRouteRegistrar(string controllerName)
         {
-            get
-            {
-                return "Blogs";
-            }
+            this.controllerName = controllerName;
         }
 
         public override void RegisterRoute(RouteCollection routes)
@@ -22,12 +21,12 @@ namespace Restfinity.Routes.Implementation
             routes.MapHttpRoute(
                  name: "BlogsGetAll",
                  routeTemplate: "restfinity/content/blogs/",
-                 defaults: new { controller = ControllerName, action = DefaultGetMethod });
+                 defaults: new { controller = controllerName, action = DefaultGetMethod });
 
             routes.MapHttpRoute(
                name: "BlogsGetOne",
                routeTemplate: "restfinity/content/blog/{id}",
-               defaults: new { controller = ControllerName, action = DefaultGetMethod });
+               defaults: new { controller = controllerName, action = DefaultGetMethod });
         }
 
     }
