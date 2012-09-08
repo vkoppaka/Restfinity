@@ -35,7 +35,7 @@ namespace Restfinity.Controllers
             TModel item = this.GetOne(id);
             if (item == null)
             {
-                throw new HttpResponseException(Request.CreateErrorResponse(HttpStatusCode.NotFound, "There is no item with that ID."));
+                throw new HttpResponseException(Request.CreateErrorResponse(HttpStatusCode.NotFound, "There is no item of type " + typeof(TModel) + " with ID " + id.ToString()));
             }
 
             TRestModel newsRestModel = ConvertToRestModel(item);
