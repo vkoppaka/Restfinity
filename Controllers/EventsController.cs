@@ -10,7 +10,7 @@ using Telerik.Sitefinity.SitefinityExceptions;
 
 namespace Restfinity.Controllers
 {
-    public class EventsController : BaseApiController<Event, EventsRestModel, EventsManager>
+    public class EventsController : BaseApiController<Event, EventRestModel, EventsManager>
     {
         public override EventsManager GetManager()
         {
@@ -34,9 +34,9 @@ namespace Restfinity.Controllers
             }
         }
 
-        public override EventsRestModel ConvertToRestModel(Event item)
+        public override EventRestModel ConvertToRestModel(Event item)
         {
-            EventsRestModel restModel = new EventsRestModel()
+            EventRestModel restModel = new EventRestModel()
             {
                 Id = item.Id,
                 Title = item.Title.Value,

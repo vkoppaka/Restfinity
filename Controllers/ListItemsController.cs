@@ -5,33 +5,35 @@ using System.Linq;
 using System.Text;
 using System.Web.Http;
 using Telerik.Sitefinity.Blogs.Model;
+using Telerik.Sitefinity.Lists.Model;
 using Telerik.Sitefinity.Modules.Blogs;
+using Telerik.Sitefinity.Modules.Lists;
 using Telerik.Sitefinity.SitefinityExceptions;
 
 namespace Restfinity.Controllers
 {
-    public class BlogPostsController : MasterDetailApiController<BlogPost, BlogPostRestModel, BlogsManager, Blog>
+    public class ListItemsController : MasterDetailApiController<ListItem, ListItemRestModel, ListsManager, List>
     {
-        public override BlogsManager GetManager()
+        public override ListsManager GetManager()
         {
-            return BlogsManager.GetManager();
+            return ListsManager.GetManager();
         }
 
-        public override IEnumerable<BlogPost> GetAll()
+        public override IEnumerable<ListItem> GetAll()
         {
-            return this.GetManager().GetBlogPosts();
+            return this.GetManager().GetListItems();
         }
         
-        public override IEnumerable<BlogPost> GetAllDetails(Guid id)
+        public override IEnumerable<ListItem> GetAllDetails(Guid id)
         {
-            return this.GetManager().GetBlogPosts().Where(bp => bp.Parent.Id == id);
+            return this.GetManager().GetListItems().Where(bp => bp.Parent.Id == id);
         }
 
-        public override BlogPost GetOne(Guid id)
+        public override ListItem GetOne(Guid id)
         {
             try
             {
-                return this.GetManager().GetBlogPost(id);
+                return this.GetManager().GetListItem(id);
             }
             catch (ItemNotFoundException)
             {
@@ -39,9 +41,9 @@ namespace Restfinity.Controllers
             }
         }
 
-        public override BlogPostRestModel ConvertToRestModel(BlogPost item)
+        public override ListItemRestModel ConvertToRestModel(ListItem item)
         {
-            BlogPostRestModel restModel = new BlogPostRestModel()
+            ListItemRestModel restModel = new ListItemRestModel()
             {
                 Id = item.Id,
                 Title = item.Title.Value,

@@ -12,7 +12,7 @@ namespace Restfinity
         public const string EcommerceProductsControllerName = "EcommerceProducts";
         public const string EventsControllerName = "Events";
         public const string NewsControllerName = "News";
-
-
+        public const string ListsControllerName = "Lists";
+        public const string ListItemsControllerName = "ListItems";
     }
 }

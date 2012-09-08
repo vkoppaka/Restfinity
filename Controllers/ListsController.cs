@@ -3,29 +3,29 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Telerik.Sitefinity.Blogs.Model;
-using Telerik.Sitefinity.Modules.Blogs;
+using Telerik.Sitefinity.Lists.Model;
+using Telerik.Sitefinity.Modules.Lists;
 using Telerik.Sitefinity.SitefinityExceptions;
 
 namespace Restfinity.Controllers
 {
-    public class BlogsController : BaseApiController<Blog, BlogRestModel, BlogsManager>
+    public class ListsController : BaseApiController<List, ListRestModel, ListsManager>
     {
-        public override BlogsManager GetManager()
+        public override ListsManager GetManager()
         {
-            return BlogsManager.GetManager();
+            return ListsManager.GetManager();
         }
 
-        public override IEnumerable<Blog> GetAll()
+        public override IEnumerable<List> GetAll()
         {
-            return this.GetManager().GetBlogs();
+            return this.GetManager().GetLists();
         }
 
-        public override Blog GetOne(Guid id)
+        public override List GetOne(Guid id)
         {
             try
             {
-                return this.GetManager().GetBlog(id);
+                return this.GetManager().GetList(id);
             }
             catch (ItemNotFoundException)
             {
@@ -33,9 +33,9 @@ namespace Restfinity.Controllers
             }
         }
 
-        public override BlogRestModel ConvertToRestModel(Blog item)
+        public override ListRestModel ConvertToRestModel(List item)
         {
-            BlogRestModel restModel = new BlogRestModel()
+            ListRestModel restModel = new ListRestModel()
             {
                 Id = item.Id,
                 Title = item.Title.Value,

@@ -28,7 +28,9 @@ namespace Restfinity.Routes
                 new NewsRouteRegistrar(Constants.NewsControllerName),
                 new EventsRouteRegistrar(Constants.EventsControllerName),
                 new BlogsRouteRegistrar(Constants.BlogsControllerName),
-                new BlogPostsRouteRegistrar(Constants.BlogPostsControllerName)
+                new BlogPostsRouteRegistrar(Constants.BlogPostsControllerName),
+                new ListsRouteRegistrar(Constants.ListsControllerName),
+                new ListItemsRouteRegistrar(Constants.ListItemsControllerName)
             };
         }
     }
