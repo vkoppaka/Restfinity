@@ -30,7 +30,8 @@ namespace Restfinity.Routes
                 new BlogsRouteRegistrar(Constants.BlogsControllerName),
                 new BlogPostsRouteRegistrar(Constants.BlogPostsControllerName),
                 new ListsRouteRegistrar(Constants.ListsControllerName),
-                new ListItemsRouteRegistrar(Constants.ListItemsControllerName)
+                new ListItemsRouteRegistrar(Constants.ListItemsControllerName),
+                new ForumGroupsRouteRegistrar(Constants.ForumGroupsControllerName)
             };
         }
     }

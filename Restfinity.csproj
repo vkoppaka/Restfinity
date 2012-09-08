@@ -74,6 +74,9 @@
     <Reference Include="Telerik.Sitefinity.Ecommerce">
       <HintPath>Reference Assemblies\Telerik.Sitefinity.Ecommerce.dll</HintPath>
     </Reference>
+    <Reference Include="Telerik.Sitefinity.Forums">
+      <HintPath>Reference Assemblies\Telerik.Sitefinity.Forums.dll</HintPath>
+    </Reference>
     <Reference Include="Telerik.Sitefinity.Model">
       <HintPath>Reference Assemblies\Telerik.Sitefinity.Model.dll</HintPath>
     </Reference>
@@ -83,6 +86,7 @@
     <Compile Include="Controllers\BaseApiController.cs" />
     <Compile Include="Controllers\BlogPostsController.cs" />
     <Compile Include="Controllers\BlogsController.cs" />
+    <Compile Include="Controllers\ForumGroupsController.cs" />
     <Compile Include="Controllers\ListItemsController.cs" />
     <Compile Include="Controllers\EcommerceProductsController.cs" />
     <Compile Include="Controllers\EventsController.cs" />
@@ -93,6 +97,7 @@
     <Compile Include="Models\Content\BlogRestModel.cs" />
     <Compile Include="Models\Content\ContentRestModel.cs" />
     <Compile Include="Models\Content\EventRestModel.cs" />
+    <Compile Include="Models\Content\ForumGroupRestModel.cs" />
     <Compile Include="Models\Content\ListItemRestModel.cs" />
     <Compile Include="Models\Content\ListRestModel.cs" />
     <Compile Include="Models\Content\NewsRestModel.cs" />
@@ -102,6 +107,7 @@
     <Compile Include="Routes\Implementation\BaseRouteRegistrar.cs" />
     <Compile Include="Routes\Implementation\BlogPostsRouteRegistrar.cs" />
     <Compile Include="Routes\Implementation\BlogsRouteRegistrar.cs" />
+    <Compile Include="Routes\Implementation\ForumGroupsRouteRegistrar.cs" />
     <Compile Include="Routes\Implementation\LisItemsRouteRegistrar.cs" />
     <Compile Include="Routes\Implementation\ListsRouteRegistrar.cs" />
     <Compile Include="Routes\Implementation\EventsRouteRegistrar.cs" />
