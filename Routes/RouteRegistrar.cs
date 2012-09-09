@@ -31,8 +31,7 @@ namespace Restfinity.Routes
                 new ForumGroupsRouteRegistrar(Constants.ForumGroupsControllerName),
                 new ForumsRouteRegistrar(Constants.ForumsControllerName),
                 new ForumThreadsRouteRegistrar(Constants.ForumThreadsControllerName),
-                new ForumPostsRouteRegistrar(Constants.ForumPostsControllerName),
-                new DynamicModulesRouteRegistrar(Constants.DynamicModulesControllerName)
+                new ForumPostsRouteRegistrar(Constants.ForumPostsControllerName)
             };
         }
     }
