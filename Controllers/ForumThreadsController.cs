@@ -43,7 +43,9 @@ namespace Restfinity.Controllers
                 Id = item.Id,
                 Title = item.Title,
                 ThreadType = item.ThreadType,
-                Url = item.UrlName.Value
+                Url = item.UrlName.Value,
+                PostsCount = item.PostsCount,
+                ViewsCount = item.ViewsCount
             };
             return restModel;
         }

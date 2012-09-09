@@ -33,7 +33,8 @@ namespace Restfinity.Routes
                 new ListItemsRouteRegistrar(Constants.ListItemsControllerName),
                 new ForumGroupsRouteRegistrar(Constants.ForumGroupsControllerName),
                 new ForumsRouteRegistrar(Constants.ForumsControllerName),
-                new ForumThreadsRouteRegistrar(Constants.ForumThreadsControllerName)
+                new ForumThreadsRouteRegistrar(Constants.ForumThreadsControllerName),
+                new ForumPostsRouteRegistrar(Constants.ForumPostsControllerName)
             };
         }
     }

@@ -12,5 +12,7 @@ namespace Restfinity.Models.Content
         public string Title { get; set; }       
         public string Url { get; set; }
         public ForumThreadType ThreadType { get; set; }
+        public int PostsCount { get; set; }
+        public int ViewsCount { get; set; }
     }
 }

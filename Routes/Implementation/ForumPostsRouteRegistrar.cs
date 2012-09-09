@@ -1,0 +1,38 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Web.Routing;
+using System.Web.Http;
+
+namespace Restfinity.Routes.Implementation
+{
+    internal class ForumPostsRouteRegistrar : BaseRouteRegistrar
+    {
+        private readonly string controllerName;
+
+        public ForumPostsRouteRegistrar(string controllerName)
+        {
+            this.controllerName = controllerName;
+        }
+
+        public override void RegisterRoute(RouteCollection routes)
+        {
+            routes.MapHttpRoute(
+                 name: "ForumPostsGetAll",
+                 routeTemplate: "restfinity/content/forumposts/",
+                 defaults: new { controller = controllerName, action = DefaultGetMethod});
+
+            routes.MapHttpRoute(
+               name: "ForumPostsGetOne",
+               routeTemplate: "restfinity/content/forumpost/{id}",
+               defaults: new { controller = controllerName, action = DefaultGetMethod });
+
+            routes.MapHttpRoute(
+               name: "ForumPostsGetAllOf",
+               routeTemplate: "restfinity/content/forumthread/{id}/posts",
+               defaults: new { controller = controllerName, action = "GetDetailsOf" });
+        }
+
+    }
+}
