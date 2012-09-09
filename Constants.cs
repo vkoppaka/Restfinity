@@ -16,6 +16,8 @@ namespace Restfinity
         public const string ListItemsControllerName = "ListItems";
         public const string ForumGroupsControllerName = "ForumGroups";
         public const string ForumsControllerName = "Forums";
+        public const string ForumThreadsControllerName = "ForumThreads";
+
 
     }
 }

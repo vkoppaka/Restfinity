@@ -88,6 +88,7 @@
     <Compile Include="Controllers\BlogsController.cs" />
     <Compile Include="Controllers\ForumsController.cs" />
     <Compile Include="Controllers\ForumGroupsController.cs" />
+    <Compile Include="Controllers\ForumThreadsController.cs" />
     <Compile Include="Controllers\ListItemsController.cs" />
     <Compile Include="Controllers\EcommerceProductsController.cs" />
     <Compile Include="Controllers\EventsController.cs" />
@@ -100,6 +101,7 @@
     <Compile Include="Models\Content\EventRestModel.cs" />
     <Compile Include="Models\Content\ForumGroupRestModel.cs" />
     <Compile Include="Models\Content\ForumRestModel.cs" />
+    <Compile Include="Models\Content\ForumThreadRestModel.cs" />
     <Compile Include="Models\Content\ListItemRestModel.cs" />
     <Compile Include="Models\Content\ListRestModel.cs" />
     <Compile Include="Models\Content\NewsRestModel.cs" />
@@ -109,6 +111,7 @@
     <Compile Include="Routes\Implementation\BaseRouteRegistrar.cs" />
     <Compile Include="Routes\Implementation\BlogPostsRouteRegistrar.cs" />
     <Compile Include="Routes\Implementation\BlogsRouteRegistrar.cs" />
+    <Compile Include="Routes\Implementation\ForumThreadsRouteRegistrar.cs" />
     <Compile Include="Routes\Implementation\ForumsRouteRegistrar.cs" />
     <Compile Include="Routes\Implementation\ForumGroupsRouteRegistrar.cs" />
     <Compile Include="Routes\Implementation\LisItemsRouteRegistrar.cs" />
