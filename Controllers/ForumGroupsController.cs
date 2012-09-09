@@ -1,12 +1,9 @@
-﻿using Restfinity.Models.Content;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using Telerik.Sitefinity.Blogs.Model;
+using Restfinity.Models.Content;
 using Telerik.Sitefinity.Forums;
 using Telerik.Sitefinity.Forums.Model;
-using Telerik.Sitefinity.Modules.Blogs;
 using Telerik.Sitefinity.SitefinityExceptions;
 
 namespace Restfinity.Controllers

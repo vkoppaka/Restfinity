@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace Restfinity
 {
@@ -18,5 +16,6 @@ namespace Restfinity
         public const string ForumsControllerName = "Forums";
         public const string ForumThreadsControllerName = "ForumThreads";
         public const string ForumPostsControllerName = "ForumPosts";
+        public const string DynamicModulesControllerName = "DynamicModules";
     }
 }

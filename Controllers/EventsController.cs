@@ -1,9 +1,7 @@
-﻿using Restfinity.Models.Content;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Web.Http;
+using Restfinity.Models.Content;
 using Telerik.Sitefinity.Events.Model;
 using Telerik.Sitefinity.Modules.Events;
 using Telerik.Sitefinity.SitefinityExceptions;

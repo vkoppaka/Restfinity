@@ -1,9 +1,7 @@
-﻿using Restfinity.Routes.Interface;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Linq;
-using System.Text;
 using System.Web.Routing;
+using Restfinity.Routes.Interface;
 
 namespace Restfinity.Routes.Implementation
 {

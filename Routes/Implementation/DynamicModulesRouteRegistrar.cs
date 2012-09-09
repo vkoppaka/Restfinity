@@ -5,11 +5,11 @@ using System.Web.Routing;
 
 namespace Restfinity.Routes.Implementation
 {
-    internal class ForumGroupsRouteRegistrar : BaseRouteRegistrar
+    internal class DynamicModulesRouteRegistrar : BaseRouteRegistrar
     {
         private readonly string controllerName;
 
-        public ForumGroupsRouteRegistrar(string controllerName)
+        public DynamicModulesRouteRegistrar(string controllerName)
         {
             this.controllerName = controllerName;
         }
@@ -17,15 +17,9 @@ namespace Restfinity.Routes.Implementation
         public override void RegisterRoute(RouteCollection routes)
         {
             routes.MapHttpRoute(
-                 name: "ForumGroupsGetAll",
-                 routeTemplate: "restfinity/content/forumgroups/",
+                 name: "DynamicModulesGetAll",
+                 routeTemplate: "restfinity/dynamicmodules/all/",
                  defaults: new { controller = controllerName, action = DefaultGetMethod });
-
-            routes.MapHttpRoute(
-               name: "ForumGroupsGetOne",
-               routeTemplate: "restfinity/content/forumgroup/{id}",
-               defaults: new { controller = controllerName, action = DefaultGetMethod });
         }
-
     }
 }

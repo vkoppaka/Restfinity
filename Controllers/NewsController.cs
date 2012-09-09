@@ -1,6 +1,6 @@
-﻿using Restfinity.Models.Content;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using Restfinity.Models.Content;
 using Telerik.Sitefinity.Modules.News;
 using Telerik.Sitefinity.News.Model;
 using Telerik.Sitefinity.SitefinityExceptions;

@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web.Http;
 using Restfinity.Models.Ecommerce;
 using Telerik.Sitefinity.Ecommerce.Catalog.Model;
 using Telerik.Sitefinity.Modules.Ecommerce.Catalog;
-using System.Net.Http;
-using System.Net;
 using Telerik.Sitefinity.SitefinityExceptions;
 
 namespace Restfinity.Controllers

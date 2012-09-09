@@ -81,12 +81,16 @@
     <Reference Include="Telerik.Sitefinity.Model">
       <HintPath>Reference Assemblies\Telerik.Sitefinity.Model.dll</HintPath>
     </Reference>
+    <Reference Include="Telerik.Sitefinity.Utilities">
+      <HintPath>Reference Assemblies\Telerik.Sitefinity.Utilities.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
     <Compile Include="Controllers\BaseApiController.cs" />
     <Compile Include="Controllers\BlogPostsController.cs" />
     <Compile Include="Controllers\BlogsController.cs" />
+    <Compile Include="Controllers\DynamicModulesController.cs" />
     <Compile Include="Controllers\ForumPostsController.cs" />
     <Compile Include="Controllers\ForumsController.cs" />
     <Compile Include="Controllers\ForumGroupsController.cs" />
@@ -114,6 +118,7 @@
     <Compile Include="Routes\Implementation\BaseRouteRegistrar.cs" />
     <Compile Include="Routes\Implementation\BlogPostsRouteRegistrar.cs" />
     <Compile Include="Routes\Implementation\BlogsRouteRegistrar.cs" />
+    <Compile Include="Routes\Implementation\DynamicModulesRouteRegistrar.cs" />
     <Compile Include="Routes\Implementation\ForumPostsRouteRegistrar.cs" />
     <Compile Include="Routes\Implementation\ForumThreadsRouteRegistrar.cs" />
     <Compile Include="Routes\Implementation\ForumsRouteRegistrar.cs" />
